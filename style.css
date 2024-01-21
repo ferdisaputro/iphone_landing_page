@@ -1,0 +1,201 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+
+.container {
+   height: 100vh;
+   width: 100vw;
+   position: relative;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   overflow: hidden;
+   transition: .8s;
+}
+
+
+/* images */
+.images-circle {
+   height: 70vh;
+   width: 70vh;
+   border-radius: 50%;
+   position: absolute;
+   top: 50%;
+   right: 0px;
+   display: grid;
+   place-items: center;
+   translate: 50% -50%;
+   border-radius: 760px;
+   background: linear-gradient(180deg, rgba(217, 217, 217, 0.50) 0%, rgba(217, 217, 217, 0.0) 90%);
+   backdrop-filter: blur(2px);
+   transition: .8s;
+}
+
+.images-circle img {
+   position: absolute;
+   width: 30%;
+   transition: .8s;
+}
+
+img.first {
+   left: -15%;
+   scale: 2.4;
+   translate: -50% 0;
+}
+
+img.second {
+   bottom: -15%; 
+}
+
+img.third {
+   right: -15%;
+}
+
+img.forth {
+   top: -15%;
+}
+
+/* text */
+.text {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding-left: 6rem;
+   white-space: nowrap;
+}
+
+.text h1, .text h3 {
+   font-family: Montserrat;
+   font-style: normal;
+   font-weight: 700;
+   line-height: normal;
+}
+
+.title {
+   font-size: 75px;
+}
+
+.price {
+   font-size: 55px;
+}
+
+
+/* color palette */
+.color-palettes {
+   width: 85%;
+   padding: 4rem 0 3rem 0;
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   gap: 2rem;
+   max-width: 700px;
+}
+
+.color-palettes > div {
+   width: 5.5rem;
+   height: 5.5rem;
+   border-radius: 50%;
+   position: relative;
+   border: 2px solid white;
+   transition: .3s;
+}
+
+.color-palettes > div::after {
+   content: "";
+   position: absolute;
+   background-color: transparent;
+   width: 100%;
+   height: 100%;
+   border-radius: 50%;
+   transition: .2s;
+}
+
+.color-palettes > div:hover::after {
+   background-color: rgba(0, 0, 0, 0.331);
+}
+
+.color-palettes > div:hover {
+   scale: 1.05;
+}
+
+.color-palettes .black {
+   background-color: #302F2D;
+}
+
+.color-palettes .purple {
+   background-color: #423B4A;
+}
+
+.color-palettes .gold {
+   background-color: #F1E2C8;
+}
+
+.color-palettes .silver {
+   background-color: #Fff;
+}
+
+/* cta */
+.cta {
+   width:80%;
+   border-radius: 1.8rem;
+   height: 7rem;
+   border: none;
+   font-size: 50px;
+   font-family: Montserrat;
+   font-weight: 700;
+   padding-left: 0;
+   max-width: 650px;
+   transition: .8s;
+   cursor: pointer;
+}
+.cta span {
+   margin-left: -60px;
+}
+.cta img {
+   width: 60px;
+   height: 60px;
+}
+
+/* black */
+
+.black-cta {
+   background-color: #282725;
+   color: white
+}
+.black-bg {
+   color: white;
+   background: #474545;
+   /* background: linear-gradient(144deg, rgba(95, 93, 93) 18.49%, rgba(38, 38, 38) 81.58%); */
+}
+
+/* purple */
+.purple-cta {
+   background: #6c6277;
+   color: white
+}
+.purple-bg {
+   color: white;
+   background: #4a4251;
+   /* background: linear-gradient(144deg, #4B4252 18.49%, #443C4B 81.58%); */
+}
+
+/* gold */
+.gold-cta {
+   background: #d7cbb1;;
+   color: black
+}
+.gold-bg {
+   background: #f9eeda;
+   /* background: linear-gradient(144deg, #F1E2C8 18.49%, #F1E2C8 81.58%); */
+}
+
+/* silver */
+.silver-cta {
+   background: #a8abaa;;
+   color: white
+}
+.silver-bg {
+   color: black;
+   background: #f9fbfb;
+   /* background: linear-gradient(144deg, #FFF 18.49%, #FFF 81.58%);; */
+}
